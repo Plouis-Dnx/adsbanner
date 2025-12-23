@@ -1,0 +1,40 @@
+// Architecture
+/ADSBANNER
+│
+├── .env
+├── package.json
+├── README.md
+│
+├── /src
+│   ├── main.jsx
+│   ├── App.jsx
+│   │
+│   ├── /api
+│   │   ├── supabaseClient.js
+│   │   ├── adsApi.js
+│   │
+│   ├── /ads-module
+│   │   ├── AdsBanner.jsx
+│   │   ├── useAds.js
+│   │   ├── index.js
+│   │
+│   ├── /components
+│   │   └── (si tu veux d’autres composants)
+│   │
+│   ├── /styles
+│       └── index.css (tailwind)
+│
+└── /public
+    └── index.html
+
+// SQL commands to create both tables
+create table ads ( 
+  id serial primary key,
+  image_url text,
+  link text
+);
+
+create table show_adds ( 
+  id int primary key check (id = 1), -- CHECK limits the number of lines in the table
+  ads_enabled boolean default true
+);
