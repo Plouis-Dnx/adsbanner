@@ -24,7 +24,10 @@ function AdsBanner() {
 
     if (loading) {
         return (
-            <div className="w-full h-40 bg-blue-300 rounded-xl animate-pulse"></div>
+            <div className="flex justify-center items-center w-full h-40">
+                <div className="w-10 h-10 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+            </div>
+
         );
     }
 
@@ -36,7 +39,7 @@ function AdsBanner() {
     return(
         <div className="relative max-w-xl mx-auto">
             <button onClick={() => setClosed(true)} 
-                className="absolute top-2 right-2 bg-black/50 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-black/70 transition">
+                className="absolute top-2 right-2 bg-black/50 text-white rounded-full w-6 h-6 flex items-center justify-center hover:bg-black/70 transition z-1">
                 x
             </button>
 
