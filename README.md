@@ -63,6 +63,7 @@ using (true);
 Le champ `ads_enabled` sert de kill switch global.
 
 ## Structure du Projet
+```
 src/
  ├─ ads_module/
  │   ├─ components/
@@ -76,6 +77,7 @@ src/
  ├─ App.jsx
  ├─ main.jsx
  └─ index.css
+```
 
 ## Utilisation
 ``` jsx
