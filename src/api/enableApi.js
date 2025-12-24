@@ -1,6 +1,7 @@
 import { supabase } from "./supabaseClient";
 
 export async function getAdsEnabled() {
+    // Fetch the kill switch value from the 'show_ads' table
     const {data, error} = await supabase
         .from('show_ads')
         .select('ads_enabled')
@@ -8,7 +9,7 @@ export async function getAdsEnabled() {
         .single();
 
     if(error) {
-        console.error("Error while fetching ads : ", error);
+        console.error("Error fetching ads:", error);
         throw error;
     }
 
